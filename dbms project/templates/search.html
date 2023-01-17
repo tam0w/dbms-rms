@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form class="row g-3 ml-auto mr-5" action="/search" method="POST">
+
+       <div class="col-md-12 row-md mr-auto">
+         <h1 class="ml-4 mr-4"><b>SEARCH LISTINGS:</b></h1>
+         <p class="form">Filter the property based on the following:</p>
+       </div>
+
+
+         <div class="col-md-3 ml-4">
+           <label for="inputPassword4" class="form-label"></label>
+    <input name="pname_s" class="form-control" id="inputEmail4" placeholder="Property name (if known)">
+  </div>
+  <div class="col-3">
+    <label for="inputPassword4" class="form-label"></label>
+    <input name="oname_s" class="form-control" id="inputPassword4" placeholder="Owner (if known)">
+  </div>
+  <div class="col-10 ml-4">
+    <label for="inputAddress" class="form-label"></label>
+    <input name="ploc_s" type="text" class="form-control" id="inputAddress" placeholder="Property Address">
+  </div>
+  <div class="col-md-4 ml-4 mb-auto">
+    <label for="inputAddress2" class="form-label"></label><br>
+    <input name="pbhk_s" type="text" class="form-control" id="inputAddress2" placeholder="No of Bedrooms">
+  </div>
+       <br><span class="col-6"></span>
+  <div class="col-md-4">
+    <label for="accType" class="mt-4">Enter the Size of the Property: (in sqFt)</label>
+      <select id="accType" name="psqft_s" class="form-control h-4 ml-4">
+        <option>0-500</option>
+        <option>500-1000</option>
+        <option>1000-1500</option>
+        <option>1500-2000</option>
+        <option>2000+</option>
+      </select>
+  </div>
+
+  <div class="col-md-4 ml-4 mt-4">
+    <label for="accType" class="">Choose the type of Property:</label>
+      <select id="propType" name="ptype_s" class="form-control h-4">
+        <option>Flat</option>
+        <option>Villa</option>
+      </select>
+  </div>
+<!--  <div class="col-md-4 ml-4">-->
+<!--    <label for="inputZip" class="form-label"></label>-->
+<!--    <input name="pbhk_s" type="text" class="form-control" id="inputZip" placeholder="Enter the no of Bedrooms">-->
+<!--  </div>-->
+
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-info col-2 mt-5">Search</button>
+  </div>
+</form>
+  </body>
+</html>
+
+{% endblock %}
