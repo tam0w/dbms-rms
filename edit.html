@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+    <form action="/add" method="POST" class="form-group ml-5">
+  <h1 class="ml-auto mr-4"><b>EDIT LISTINGS:</b></h1>
+      <label for="p_name" class="mb-1">Enter the Name of the Property:</label>
+      <input id="p_name" value="" name="p_name" class="form-control mb-1" placeholder="eg: Al Falah Residence">
+        <label for="p_address" class="mb-1">Enter the Address of the Property:</label>
+      <input id="p_address" value="" name="p_address" class="form-control mb-1" placeholder="eg: Bikarnakatte, Mangalore">
+      <label for="p_bhk"  class="mb-1">Enter the no of Bedrooms of the Property:</label>
+      <input id="p_bhk" value="" name="p_bhk" class="form-control mb-1" placeholder="eg: 5">
+        <label for="p_sqft" class="mb-1">Enter the square feet of the Property:</label>
+      <input id="p_sqft" value="" name="p_sqft"  class="form-control" placeholder="eg: 1400" required="">
+
+
+        <div class="form-group">
+      <label for="p_type" class="mb-1">Choose the type of Property:</label>
+      <select id="p_type" value="" name="p_type" class="custom-select mb-5">
+        <option>Flat</option>
+        <option>Villa</option>
+      </select>
+        </div>
+
+        <button class="btn btn-lg btn-info btn-block" type="submit">UPDATE LISTING</button>
+
+    </button>
+
+    </form>
+  </body>
+</html>
+
+{% endblock %}
